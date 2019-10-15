@@ -1,4 +1,4 @@
 package modelo;
-public class Peao extends Peca{//classe para peao, grupo 1;
+public class Peao extends Peca{//Grupo 1;
 
 }

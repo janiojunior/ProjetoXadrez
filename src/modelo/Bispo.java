@@ -1,5 +1,4 @@
 package modelo;
-
-public class Bispo {
+public class Bispo {//Grupo 1
 
 }
