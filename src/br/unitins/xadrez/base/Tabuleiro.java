@@ -1,4 +1,4 @@
-package br.unitins.xadrez.aplicacao;
+package br.unitins.xadrez.base;
 
 public class Tabuleiro {//Montar matriz de tabuleiro
 
