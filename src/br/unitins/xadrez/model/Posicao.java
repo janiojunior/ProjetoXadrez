@@ -1,4 +1,4 @@
-package modelo;
+package br.unitins.xadrez.model;
 
 public class Posicao {
 	private int linha;
