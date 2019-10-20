@@ -1,5 +1,5 @@
 package br.unitins.xadrez.model;
 
-public class Torre {
+public class Torre extends Peca{
 
 }

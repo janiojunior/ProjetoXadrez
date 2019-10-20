@@ -1,5 +1,5 @@
 package br.unitins.xadrez.model;
 
-public class Rainha {
+public class Rainha extends Peca {
 
 }

@@ -1,4 +1,4 @@
 package br.unitins.xadrez.model;
-public class Bispo {//Grupo 1
+public class Bispo extends Peca {//Grupo 1
 
 }

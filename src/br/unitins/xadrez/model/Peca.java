@@ -1,6 +1,6 @@
 package br.unitins.xadrez.model;
 
-public class Peca {
+public abstract class Peca {
 	
 	private Cor cor;
 	private Posicao posicao;
@@ -11,6 +11,12 @@ public class Peca {
 	}
 	public void setPosicao(Posicao posicao) {
 		this.posicao = posicao;
+	}
+	public boolean isNuncaMovida() {
+		return nuncaMovida;
+	}
+	public void setNuncaMovida(boolean nuncaMovida) {
+		this.nuncaMovida = nuncaMovida;
 	}
 	
 	
