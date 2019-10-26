@@ -36,12 +36,12 @@ public class Tabuleiro {
 //		
 //		System.out.println(getPeca(0,0));
 		
-		System.out.println(matrizTabuleiro.size());
+
 		
 		Tabuleiro.iniciarTabuleiro();
-		
-		System.out.println(matrizTabuleiro.size());
-
+		Peca peca= new Cavalo(0, 1, Cor.PRETA);
+		boolean teste = peca.mover(new Posicao(2,2));
+		System.out.println(teste);
 		
 		Tabuleiro.imprimir();
 		

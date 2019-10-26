@@ -9,7 +9,16 @@ public class Cavalo extends Peca {
 
 	@Override
 	public boolean mover(Posicao posicao) {
-		// TODO Auto-generated method stub
+		if((posicao.getColuna() == getPosicao().getColuna()+2 && posicao.getLinha() == getPosicao().getLinha()+1)
+		||(posicao.getColuna() == getPosicao().getColuna()+2 && posicao.getLinha() == getPosicao().getLinha()-1)
+		||(posicao.getColuna() == getPosicao().getColuna()-2 && posicao.getLinha() == getPosicao().getLinha()+1)
+		||(posicao.getColuna() == getPosicao().getColuna()-2 && posicao.getLinha() == getPosicao().getLinha()-1) 
+		||(posicao.getColuna() == getPosicao().getColuna()+1 && posicao.getLinha() == getPosicao().getLinha()-2) 
+		||(posicao.getColuna() == getPosicao().getColuna()+1 && posicao.getLinha() == getPosicao().getLinha()+2) 
+		||(posicao.getColuna() == getPosicao().getColuna()-1 && posicao.getLinha() == getPosicao().getLinha()+2) 
+		||(posicao.getColuna() == getPosicao().getColuna()-1 && posicao.getLinha() == getPosicao().getLinha()-2)) {
+			return true;
+		}
 		return false;
 	}
 
