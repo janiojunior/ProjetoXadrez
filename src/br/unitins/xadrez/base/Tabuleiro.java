@@ -36,13 +36,15 @@ public class Tabuleiro {
 //		
 //		System.out.println(getPeca(0,0));
 		
-
-		
+		//Incializa Tabuleiro
 		Tabuleiro.iniciarTabuleiro();
-		Peca peca= new Cavalo(0, 1, Cor.PRETA);
-		boolean teste = peca.mover(new Posicao(2,2));
-		System.out.println(teste);
+
+		//Verificação do movimento da peça
+//		Peca peca= new Cavalo(0, 1, Cor.PRETA);
+//		boolean teste = peca.mover(new Posicao(2,2));
+//		System.out.println(teste);
 		
+		Tabuleiro.mover(Tabuleiro.getPeca(0, 1), new Posicao(2,2));
 		Tabuleiro.imprimir();
 		
 	}
@@ -90,10 +92,12 @@ public class Tabuleiro {
 	public static boolean mover(Peca peca, Posicao novaPosicao) {
 		Posicao posicaoAntiga = peca.getPosicao();
 		if (peca.mover(novaPosicao)) {
+			//Define a posicao nova como posciao atual da peca
+			peca.setPosicao(novaPosicao);
 			// apagar a posicao antiga
-			matrizTabuleiro.put(posicaoAntiga, null);
+			matrizTabuleiro.replace(posicaoAntiga, null);
 			// acicionando a peca na nova posicao
-			matrizTabuleiro.put(peca.getPosicao(), peca);
+			matrizTabuleiro.put(novaPosicao, peca);
 			return true;
 		}
 		return false;
