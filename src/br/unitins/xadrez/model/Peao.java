@@ -1,4 +1,18 @@
 package br.unitins.xadrez.model;
-public class Peao extends Peca{//Grupo 1;
+public class Peao extends Peca{
+
+	public Peao(int linha, int coluna, Cor cor) {
+		super(linha, coluna, cor);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean mover(Posicao posicao) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	
 
 }
