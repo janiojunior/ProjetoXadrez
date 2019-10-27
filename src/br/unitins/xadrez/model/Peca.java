@@ -25,6 +25,14 @@ public abstract class Peca {
 		this.nuncaMovida = nuncaMovida;
 	}
 	
+	public Cor getCor() {
+		return cor;
+	}
+
+	public void setCor(Cor cor) {
+		this.cor = cor;
+	}
+
 	@Override
 	public String toString() {
 		if(this == null) {

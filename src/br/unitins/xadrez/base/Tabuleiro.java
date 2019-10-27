@@ -17,8 +17,12 @@ public class Tabuleiro {
 	// posicao = linha e coluna
 	//private Peca[][] matrizTabuleiro = new Peca[8][8]; //Matriz tabuleiro
 	public static Map<Posicao, Peca> matrizTabuleiro = new HashMap<Posicao, Peca>();
+	//Variaveis para teste de acumulo de cores
+	private static int countPreto = 0;
+	private static int countBranco = 0;
 	
 	public static void main(String[] args) {
+
 //		Peca peca1 = new Peao(0,0, Cor.PRETA);
 //		Peca peca2 = new Cavalo(0,1, Cor.PRETA);
 //		Peca peca3 = new Torre(0,2, Cor.PRETA);
@@ -44,7 +48,10 @@ public class Tabuleiro {
 //		boolean teste = peca.mover(new Posicao(2,2));
 //		System.out.println(teste);
 		
+		//Movimento da peca
 		Tabuleiro.mover(Tabuleiro.getPeca(0, 1), new Posicao(2,2));
+		Tabuleiro.mover(Tabuleiro.getPeca(2, 2), new Posicao(4,1));
+		Tabuleiro.mover(Tabuleiro.getPeca(4, 1), new Posicao(6,2));
 		Tabuleiro.imprimir();
 		
 	}
@@ -92,6 +99,21 @@ public class Tabuleiro {
 	public static boolean mover(Peca peca, Posicao novaPosicao) {
 		Posicao posicaoAntiga = peca.getPosicao();
 		if (peca.mover(novaPosicao)) {
+			//Sistema de Comer Peca PS: Falta a verificação se a Peca é da mesma cor e nao deixar comer
+			if((matrizTabuleiro.get(novaPosicao) != null) && (getPeca(novaPosicao).getCor() != peca.getCor())) {
+				//Remover depois o if abaixo
+				if(getPeca(novaPosicao).getCor() == Cor.BRANCA) {
+					countBranco++;
+				}else {
+					countPreto++;
+				}
+				matrizTabuleiro.replace(posicaoAntiga, null);
+				matrizTabuleiro.remove(novaPosicao, null);
+				peca.setPosicao(novaPosicao);
+				matrizTabuleiro.put(novaPosicao, peca);
+				return true;
+				
+			}else {
 			//Define a posicao nova como posciao atual da peca
 			peca.setPosicao(novaPosicao);
 			// apagar a posicao antiga
@@ -99,6 +121,7 @@ public class Tabuleiro {
 			// acicionando a peca na nova posicao
 			matrizTabuleiro.put(novaPosicao, peca);
 			return true;
+			}
 		}
 		return false;
 	}
@@ -118,7 +141,8 @@ public class Tabuleiro {
 				System.out.print(" " + getPeca(linha, col));
 			}
 		}
-		
+		System.out.println(" \n \n");
+		System.out.println("Foram capturadas: \n Brancas: " +countBranco +" Pretas: " +countPreto);
 	}
 	
 	
