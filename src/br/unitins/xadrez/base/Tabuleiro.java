@@ -50,8 +50,8 @@ public class Tabuleiro {
 		
 		//Movimento da peca
 		Tabuleiro.mover(Tabuleiro.getPeca(0, 1), new Posicao(2,2));
-		Tabuleiro.mover(Tabuleiro.getPeca(2, 2), new Posicao(4,1));
-		Tabuleiro.mover(Tabuleiro.getPeca(4, 1), new Posicao(6,2));
+		Tabuleiro.mover(Tabuleiro.getPeca(2, 2), new Posicao(1,4));
+//		Tabuleiro.mover(Tabuleiro.getPeca(4, 1), new Posicao(6,2));
 		Tabuleiro.imprimir();
 		
 	}
@@ -113,6 +113,10 @@ public class Tabuleiro {
 				matrizTabuleiro.put(novaPosicao, peca);
 				return true;
 				
+			}else if((matrizTabuleiro.get(novaPosicao) != null) && (getPeca(novaPosicao).getCor() == peca.getCor())) {//Nao precisa porque ele gera null pointer exception nesse caso, mas é bom ter
+				System.out.println("Movimento Invalido");
+				return false;
+			
 			}else {
 			//Define a posicao nova como posciao atual da peca
 			peca.setPosicao(novaPosicao);
