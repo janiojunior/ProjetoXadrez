@@ -35,11 +35,7 @@ public abstract class Peca {
 
 	@Override
 	public String toString() {
-		if(this == null) {
-			 return " VAZIO";
-		} else {
 			return this.getClass().getSimpleName() + " - " + this.cor;
-		}
 	}
 	
 }
