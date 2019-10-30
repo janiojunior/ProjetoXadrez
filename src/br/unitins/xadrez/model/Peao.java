@@ -8,7 +8,7 @@ public class Peao extends Peca{
 
 	@Override
 	public boolean mover(Posicao posicao) {
-		if(posicao.getColuna()==getPosicao().getColuna()+1) {
+		if(posicao.getLinha()==getPosicao().getLinha()+1) {
 			return true;
 		}
 		return false;
