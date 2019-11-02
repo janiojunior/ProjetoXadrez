@@ -127,6 +127,10 @@ public class Tabuleiro {
 			matrizTabuleiro.put(novaPosicao, peca);
 			return true;
 			}
+			if(peca instanceof Peao && getPeca(novaPosicao).getCor()!=peca.getCor()) {
+				((Object) peca).capturarPeca();
+				return true;
+			}return false;
 		}
 		return false;
 	}
