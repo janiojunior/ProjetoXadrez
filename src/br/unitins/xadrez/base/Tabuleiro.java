@@ -44,13 +44,13 @@ public class Tabuleiro {
 		Tabuleiro.iniciarTabuleiro();
 
 		//Verificação do movimento da peça
-		Peca peca= new Peao(6, 3, Cor.BRANCA);
-		boolean teste = peca.mover(new Posicao(4,3));
-		System.out.println(teste);
+//		Peca peca= new Peao(6, 3, Cor.BRANCA);
+//		boolean teste = peca.mover(new Posicao(4,3));
+//		System.out.println(teste);
 		
 		//Movimento da peca
-//		Tabuleiro.mover(Tabuleiro.getPeca(0, 1), new Posicao(2,2));
-//		Tabuleiro.mover(Tabuleiro.getPeca(2, 2), new Posicao(4,1));
+//		Tabuleiro.mover(Tabuleiro.getPeca(1, 1), new Posicao(3,1));
+//		Tabuleiro.mover(Tabuleiro.getPeca(0, 2), new Posicao(2,0));
 //		Tabuleiro.mover(Tabuleiro.getPeca(4, 1), new Posicao(6,2));
 //		Tabuleiro.mover(Tabuleiro.getPeca(6, 2), new Posicao(5,4));
 		Tabuleiro.imprimir();
