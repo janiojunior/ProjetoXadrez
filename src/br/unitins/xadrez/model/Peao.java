@@ -9,8 +9,8 @@ public class Peao extends Peca{
 
 	@Override
 	public boolean mover(Posicao posicao) {
-			if((posicao.getColuna() == getPosicao().getColuna()+2 || posicao.getColuna() == getPosicao().getColuna()-2 && posicao.getLinha() == getPosicao().getLinha() && this.isNuncaMovida())
-				||(posicao.getColuna() == getPosicao().getColuna()+1 ||posicao.getColuna() == getPosicao().getColuna()-1 && posicao.getLinha() == getPosicao().getLinha())) {
+			if((posicao.getColuna() == getPosicao().getColuna()+2 || posicao.getColuna() == getPosicao().getColuna()-2 )&& posicao.getLinha() == getPosicao().getLinha() && this.isNuncaMovida()
+				||(posicao.getColuna() == getPosicao().getColuna()+1 ||posicao.getColuna() == getPosicao().getColuna()-1 )&& posicao.getLinha() == getPosicao().getLinha()) {
 			this.setNuncaMovida(false);
 					return true;
 			}
