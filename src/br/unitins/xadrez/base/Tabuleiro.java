@@ -128,7 +128,7 @@ public class Tabuleiro {
 			return true;
 			}
 			if(peca instanceof Peao && getPeca(novaPosicao).getCor()!=peca.getCor()) {
-				((Object) peca).capturarPeca();
+				((Peao) peca).capturarPeca(novaPosicao);
 				return true;
 			}return false;
 		}
