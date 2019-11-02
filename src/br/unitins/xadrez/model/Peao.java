@@ -16,7 +16,7 @@ public class Peao extends Peca{
 			
 			this.setNuncaMovida(false);
 			
-			if((posicao.getColuna() == getPosicao().getColuna()+2 && posicao.getLinha() == getPosicao().getLinha())
+			if((posicao.getColuna() == getPosicao().getColuna()+2 && posicao.getLinha() == getPosicao().getLinha() && this.isNuncaMovida())
 				||(posicao.getColuna() == getPosicao().getColuna()+1 && posicao.getLinha() == getPosicao().getLinha())) {
 				
 					return true;
