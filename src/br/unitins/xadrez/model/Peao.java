@@ -29,9 +29,8 @@ public class Peao extends Peca{
 			}
 			
 		}*/
-		if(movInicial == true && (posicao.getLinha() == getPosicao().getLinha()+2 || posicao.getLinha() == getPosicao().getLinha()-2 && posicao.getColuna() == getPosicao().getColuna()) || (posicao.getLinha() ==
-				  getPosicao().getLinha()+1 ||posicao.getLinha() ==
-				  getPosicao().getLinha()-1 && posicao.getColuna() == getPosicao().getColuna())) {
+		if(movInicial == true && (posicao.getLinha() == getPosicao().getLinha()+2 || posicao.getLinha() == getPosicao().getLinha()-2 && posicao.getColuna() == getPosicao().getColuna()) 
+				              || (posicao.getLinha() == getPosicao().getLinha()+1 || posicao.getLinha() == getPosicao().getLinha()-1 && posicao.getColuna() == getPosicao().getColuna())) {
 			movInicial = false;
 			return true;
 		}
