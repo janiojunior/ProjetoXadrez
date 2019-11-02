@@ -20,6 +20,9 @@ public class Peao extends Peca{
 			}else if (movInicial == false && (posicao.getLinha() ==
 					  getPosicao().getLinha()-1 && posicao.getColuna() == getPosicao().getColuna())) {
 				return true;
+			}else if((getPosicao()!= null) &&(posicao.getColuna() == getPosicao().getColuna()+1 || posicao.getColuna() == getPosicao().getColuna()-1 &&
+					posicao.getLinha()== getPosicao().getLinha()+1)) {
+				return true;
 			}
 		}
 		if(this.getCor() == Cor.PRETA) {
@@ -29,6 +32,9 @@ public class Peao extends Peca{
 				return true;
 			}else if (movInicial == false && (posicao.getLinha() ==
 					  getPosicao().getLinha()+1 && posicao.getColuna() == getPosicao().getColuna())) {
+				return true;
+			}else if((getPosicao()!= null) &&(posicao.getColuna() == getPosicao().getColuna()+1 || posicao.getColuna() == getPosicao().getColuna()-1 &&
+					posicao.getLinha()== getPosicao().getLinha()-1)) {
 				return true;
 			}
 		}

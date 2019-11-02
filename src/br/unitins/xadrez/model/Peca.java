@@ -37,5 +37,6 @@ public abstract class Peca {
 	public String toString() {
 			return this.getClass().getSimpleName() + " - " + this.cor;
 	}
+
 	
 }
