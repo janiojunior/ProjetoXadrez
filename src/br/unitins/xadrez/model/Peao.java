@@ -9,21 +9,12 @@ public class Peao extends Peca{
 
 	@Override
 	public boolean mover(Posicao posicao) {
-		
-		// Se primeiroMovimento = true ele pode andar uma casa a mais
-		
-		if(this.isNuncaMovida()) {
-			
+			if((posicao.getColuna() == getPosicao().getColuna()+2 || posicao.getColuna() == getPosicao().getColuna()-2 && posicao.getLinha() == getPosicao().getLinha() && this.isNuncaMovida())
+				||(posicao.getColuna() == getPosicao().getColuna()+1 ||posicao.getColuna() == getPosicao().getColuna()-1 && posicao.getLinha() == getPosicao().getLinha())) {
 			this.setNuncaMovida(false);
-			
-			if((posicao.getColuna() == getPosicao().getColuna()+2 && posicao.getLinha() == getPosicao().getLinha() && this.isNuncaMovida())
-				||(posicao.getColuna() == getPosicao().getColuna()+1 && posicao.getLinha() == getPosicao().getLinha())) {
-				
 					return true;
 			}
 			
-		}
-		
 		// A ideia do if abaixo é verificar se existe uma peca de cor diferente para o peao poder come-la, no entanto, não sei como fazer essa verificacao
 		
 		/*if((posicao.getLinha()+1 && posicao.getColuna()+1 !=)) {
@@ -38,8 +29,11 @@ public class Peao extends Peca{
 
 		return false;
 	}
-
-
-	
-
+	public boolean capturarPeca(Posicao posicao) {
+		if(posicao.getColuna() == getPosicao().getColuna()+1 || posicao.getColuna() == getPosicao().getColuna()-1 &&
+				posicao.getLinha()== getPosicao().getLinha()+1 || posicao.getLinha()==posicao.getLinha()-1) {
+			return true;
+		}
+		return false;
+	}
 }
