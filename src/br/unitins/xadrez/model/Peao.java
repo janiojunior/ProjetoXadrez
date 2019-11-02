@@ -41,11 +41,4 @@ public class Peao extends Peca{
 		
 		return false;
 	}
-	public boolean capturarPeca(Posicao posicao) {
-		if(posicao.getColuna() == getPosicao().getColuna()+1 || posicao.getColuna() == getPosicao().getColuna()-1 &&
-				posicao.getLinha()== getPosicao().getLinha()+1 || posicao.getLinha()==posicao.getLinha()-1) {
-			return true;
-		}
-		return false;
 	}
-}
