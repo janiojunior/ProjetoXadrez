@@ -50,10 +50,10 @@ public class Tabuleiro {
 
 		
 		//Movimento da peca
-		Tabuleiro.mover(Tabuleiro.getPeca(1, 3), new Posicao(3,3));
-		Tabuleiro.mover(Tabuleiro.getPeca(6, 4), new Posicao(4,4));
-		Tabuleiro.mover(Tabuleiro.getPeca(3, 3), new Posicao(4,4));
-		Tabuleiro.mover(Tabuleiro.getPeca(4, 4), new Posicao(5,4));
+		Tabuleiro.mover(Tabuleiro.getPeca(0, 0), new Posicao(3,0));
+//		Tabuleiro.mover(Tabuleiro.getPeca(6, 4), new Posicao(4,4));
+//		Tabuleiro.mover(Tabuleiro.getPeca(3, 3), new Posicao(4,4));
+//		Tabuleiro.mover(Tabuleiro.getPeca(4, 4), new Posicao(5,4));
 		Tabuleiro.imprimir();
 		
 	}
@@ -100,10 +100,6 @@ public class Tabuleiro {
 	
 	public static boolean mover(Peca peca, Posicao novaPosicao) {
 		Posicao posicaoAntiga = peca.getPosicao();
-//		if(peca instanceof Peao && getPeca(novaPosicao).getCor()!=peca.getCor()) {
-//			((Peao) peca).capturarPeca(novaPosicao);
-//			return true;
-//		}else 
 		if (peca.mover(novaPosicao)) {
 			//Sistema de Comer Peca PS: Falta a verificação se a Peca é da mesma cor e nao deixar comer
 			if((matrizTabuleiro.get(novaPosicao) != null) && (getPeca(novaPosicao).getCor() != peca.getCor())) {
