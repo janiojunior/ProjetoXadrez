@@ -99,10 +99,11 @@ public class Tabuleiro {
 	
 	public static boolean mover(Peca peca, Posicao novaPosicao) {
 		Posicao posicaoAntiga = peca.getPosicao();
-		if(peca instanceof Peao && getPeca(novaPosicao).getCor()!=peca.getCor()) {
-			((Peao) peca).capturarPeca(novaPosicao);
-			return true;
-		}else if (peca.mover(novaPosicao)) {
+//		if(peca instanceof Peao && getPeca(novaPosicao).getCor()!=peca.getCor()) {
+//			((Peao) peca).capturarPeca(novaPosicao);
+//			return true;
+//		}else 
+		if (peca.mover(novaPosicao)) {
 			//Sistema de Comer Peca PS: Falta a verificação se a Peca é da mesma cor e nao deixar comer
 			if((matrizTabuleiro.get(novaPosicao) != null) && (getPeca(novaPosicao).getCor() != peca.getCor())) {
 				//Remover depois o if abaixo
