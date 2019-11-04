@@ -49,10 +49,13 @@ public class Tabuleiro {
 //		System.out.println(teste);
 
 		// Movimento da peca
-		Tabuleiro.mover(Tabuleiro.getPeca(1, 0), new Posicao(3,0));
-		Tabuleiro.mover(Tabuleiro.getPeca(0, 0), new Posicao(2,0));
-//		Tabuleiro.mover(Tabuleiro.getPeca(3, 3), new Posicao(4,4));
-//		Tabuleiro.mover(Tabuleiro.getPeca(4, 4), new Posicao(5,4));
+		/*
+		 * Tabuleiro.mover(Tabuleiro.getPeca(0, 1), new Posicao(2,2));
+		 * Tabuleiro.mover(Tabuleiro.getPeca(2, 2), new Posicao(4,3));
+		 * Tabuleiro.mover(Tabuleiro.getPeca(4, 3), new Posicao(5,5));
+		 * Tabuleiro.mover(Tabuleiro.getPeca(6, 4), new Posicao(5,5));
+		 * Tabuleiro.mover(Tabuleiro.getPeca(6,5), new Posicao(4,5));
+		 */
 		Tabuleiro.imprimir();
 
 	}

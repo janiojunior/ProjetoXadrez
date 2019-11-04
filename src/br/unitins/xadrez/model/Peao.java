@@ -1,5 +1,7 @@
 package br.unitins.xadrez.model;
 
+import br.unitins.xadrez.base.Tabuleiro;
+
 public class Peao extends Peca {
 	boolean movInicial = true;
 
@@ -52,7 +54,21 @@ public class Peao extends Peca {
 
 	@Override
 	public boolean checarTrajetoria(Posicao posicao) {
-		// TODO Auto-generated method stub
-		return super.checarTrajetoria(posicao);
+		int i = getPosicao().getLinha();
+		int j = getPosicao().getColuna();
+		if(this.getCor() == Cor.BRANCA) {
+			while(i != posicao.getLinha()) {
+				i--;
+				if(Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+		}else {
+			while(i != posicao.getLinha()) {
+				i++;
+				if(Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+		}
+		return true;
 	}
 }

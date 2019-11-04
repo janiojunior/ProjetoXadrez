@@ -39,7 +39,6 @@ public class Rei extends Peca {
 
 	@Override
 	public boolean checarTrajetoria(Posicao posicao) {
-		// TODO Auto-generated method stub
-		return super.checarTrajetoria(posicao);
+		return true;
 	}
 }
