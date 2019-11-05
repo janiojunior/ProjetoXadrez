@@ -1,5 +1,7 @@
 package br.unitins.xadrez.model;
 
+import br.unitins.xadrez.base.Tabuleiro;
+
 public class Bispo extends Peca {
 
 	public Bispo(int linha, int coluna, Cor cor) {
@@ -76,8 +78,65 @@ public class Bispo extends Peca {
 
 	@Override
 	public boolean checarTrajetoria(Posicao posicao) {
-		// TODO Auto-generated method stub
-		return super.checarTrajetoria(posicao);
+		int i = getPosicao().getLinha();
+		int j = getPosicao().getColuna();
+
+		// Verificação de trajetória no sentido: (+)Linha (+)Coluna	
+		if(posicao.getLinha() - getPosicao().getLinha() > 0 && posicao.getColuna() - getPosicao().getColuna() > 0) {
+			while(i != posicao.getLinha() && j != posicao.getColuna()) {
+				i++;
+				j++;
+				// Verificaçao especial para evitar a 
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if(Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+			// Verificação de trajetória no sentido: (+)Linha (-)Coluna	
+		}if(posicao.getLinha() - getPosicao().getLinha() > 0 && posicao.getColuna() - getPosicao().getColuna() < 0) {
+			while(i != posicao.getLinha() && j != posicao.getColuna()) {
+				i++;
+				j--;
+				// Verificaçao especial para evitar a 
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if(Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+			// Verificação de trajetória no sentido: (-)Linha (+)Coluna	
+		}if(posicao.getLinha() - getPosicao().getLinha() < 0 && posicao.getColuna() - getPosicao().getColuna() > 0) {
+			while(i != posicao.getLinha() && j != posicao.getColuna()) {
+				i--;
+				j++;
+				// Verificaçao especial para evitar a 
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if(Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+		// Verificação de trajetória no sentido: (-)Linha (-)Coluna	
+		}if(posicao.getLinha() - getPosicao().getLinha() < 0 && posicao.getColuna() - getPosicao().getColuna() < 0) {
+			while(i != posicao.getLinha() && j != posicao.getColuna()) {
+				i--;
+				j--;
+				// Verificaçao especial para evitar a 
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if(Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+		}
+			
+			
+		return true;
 	}
 
 }

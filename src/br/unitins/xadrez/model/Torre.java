@@ -55,6 +55,8 @@ public class Torre extends Peca {
 	public boolean checarTrajetoria(Posicao posicao) {
 		int i = getPosicao().getLinha();
 		int j = getPosicao().getColuna();
+		
+		// Verificação de trajetória no sentido: (+)Linha ou (+)Coluna	
 		if(posicao.getLinha() - getPosicao().getLinha() > 0 || posicao.getColuna() - getPosicao().getColuna() > 0) {
 			while(i != posicao.getLinha() || j != posicao.getColuna()) {
 				if(getPosicao().getLinha() == posicao.getLinha()) {
@@ -62,10 +64,15 @@ public class Torre extends Peca {
 				}else if(getPosicao().getColuna() == posicao.getColuna()){
 					i++;
 				}
-				if(Tabuleiro.verificadorNulo(i, j) == false) {
+				// Verificaçao especial para evitar a 
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if(Tabuleiro.verificadorNulo(i, j) == false)
 					return false;
-				}
 			}
+			// Verificação de trajetória no sentido: (-)Linha ou (-)Coluna	
 		}else if(posicao.getLinha() - getPosicao().getLinha() < 0 || posicao.getColuna() - getPosicao().getColuna() < 0) {
 			while(i != posicao.getLinha() || j != posicao.getColuna()) {
 				if(getPosicao().getLinha() == posicao.getLinha()) {
@@ -73,9 +80,13 @@ public class Torre extends Peca {
 				}else if(getPosicao().getColuna() == posicao.getColuna()){
 					i--;
 				}
-				if(Tabuleiro.verificadorNulo(i, j) == false) {
+				// Verificaçao especial para evitar a 
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if(Tabuleiro.verificadorNulo(i, j) == false)
 					return false;
-				}
 			}
 		}
 		
