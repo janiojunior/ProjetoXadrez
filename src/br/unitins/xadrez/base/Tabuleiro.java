@@ -28,20 +28,22 @@ public class Tabuleiro {
 //		Peca peca3 = new Torre(0,2, Cor.PRETA);
 //		Peca peca4 = new Bispo(0,3, Cor.PRETA);
 //		Peca peca5 = new Rainha(0,4, Cor.PRETA);
-//		
+////		
 //		matrizTabuleiro.put(peca1.getPosicao(), peca1);
 //		matrizTabuleiro.put(peca2.getPosicao(), peca2);
 //		matrizTabuleiro.put(peca3.getPosicao(), peca3);
 //		matrizTabuleiro.put(peca4.getPosicao(), peca4);
 //		matrizTabuleiro.put(peca5.getPosicao(), peca5);
-//		
+////		
 //		System.out.println(new Posicao(0,0).hashCode());
 //		System.out.println(new Posicao(0,0).hashCode());
-//		
+////		
 //		System.out.println(getPeca(0,0));
 
 		// Incializa Tabuleiro
 		Tabuleiro.iniciarTabuleiro();
+		
+		
 
 		// Verificação do movimento da peça
 //		Peca peca= new Peao(4, 4, Cor.BRANCA);

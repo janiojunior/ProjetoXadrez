@@ -115,7 +115,11 @@ public class Rainha extends Peca {
 
 	@Override
 	public boolean checarTrajetoria(Posicao posicao) {
-		// TODO Auto-generated method stub
+		int i = getPosicao().getLinha();
+		int j = getPosicao().getColuna();
+		
+		//verificação no sentido (+)linha (+)coluna
+		
 		return super.checarTrajetoria(posicao);
 	}
 }
