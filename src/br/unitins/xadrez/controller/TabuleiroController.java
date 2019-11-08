@@ -3,6 +3,8 @@ package br.unitins.xadrez.controller;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import br.unitins.xadrez.base.Tabuleiro;
+import br.unitins.xadrez.model.Posicao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -16,7 +18,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
 public class TabuleiroController implements Initializable {
-	
+
 	
 	@FXML
 	private GridPane gridPane;
@@ -318,7 +320,6 @@ public class TabuleiroController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-
 
 		addDropHandling(hbox00);
 		addDropHandling(hbox10);

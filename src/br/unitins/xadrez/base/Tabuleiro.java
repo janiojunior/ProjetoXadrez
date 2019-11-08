@@ -72,8 +72,6 @@ public class Tabuleiro {
 
 		// Incializa Tabuleiro
 		Tabuleiro.iniciarTabuleiro();
-		
-		
 
 		// Verificação do movimento da peça
 //		Peca peca= new Peao(4, 4, Cor.BRANCA);
@@ -81,13 +79,13 @@ public class Tabuleiro {
 //		System.out.println(teste);
 
 		// Movimento da peca
-		/*
-		 * Tabuleiro.mover(Tabuleiro.getPeca(0, 1), new Posicao(2,2));
-		 * Tabuleiro.mover(Tabuleiro.getPeca(2, 2), new Posicao(4,3));
-		 * Tabuleiro.mover(Tabuleiro.getPeca(4, 3), new Posicao(5,5));
-		 * Tabuleiro.mover(Tabuleiro.getPeca(6, 4), new Posicao(5,5));
-		 * Tabuleiro.mover(Tabuleiro.getPeca(6,5), new Posicao(4,5));
-		 */
+		
+		  Tabuleiro.mover(Tabuleiro.getPeca(6, 0), new Posicao(5,1));
+//		  Tabuleiro.mover(Tabuleiro.getPeca(2, 2), new Posicao(4,3));
+//		  Tabuleiro.mover(Tabuleiro.getPeca(4, 3), new Posicao(5,5));
+//		  Tabuleiro.mover(Tabuleiro.getPeca(6, 4), new Posicao(5,5));
+//		  Tabuleiro.mover(Tabuleiro.getPeca(6,5), new Posicao(4,5));
+		 
 		Tabuleiro.imprimir();
 
 	}
@@ -173,6 +171,7 @@ public class Tabuleiro {
 
 	public static Peca getPeca(Posicao posicao) {
 		return matrizTabuleiro.get(posicao);
+
 	}
 
 	public static Peca getPeca(Integer linha, Integer coluna) {
@@ -184,7 +183,7 @@ public class Tabuleiro {
 			System.out.println("");
 			for (int col = 0; col < 8; col++) {
 				System.out.print(" " + getPeca(linha, col));
-				if (getPeca(linha,col)==null)
+				if (getPeca(linha, col) == null)
 					System.out.print("         ");
 			}
 		}
