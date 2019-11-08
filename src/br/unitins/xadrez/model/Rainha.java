@@ -119,93 +119,120 @@ public class Rainha extends Peca {
 	public boolean checarTrajetoria(Posicao posicao) {
 		int i = getPosicao().getLinha();
 		int j = getPosicao().getColuna();
-		
-		if(posicao.getLinha() - getPosicao().getLinha() > 0 || posicao.getColuna() - getPosicao().getColuna() > 0) {
-			while(i != posicao.getLinha() || j != posicao.getColuna()) {
-				if(getPosicao().getLinha() == posicao.getLinha()) {
-					j++;
-				}else if(getPosicao().getColuna() == posicao.getColuna()){
-					i++;
-				}
-				// Verificaçao especial para evitar a 
+
+		// Verificação de trajetória no sentido: (+)Linha
+		if (posicao.getLinha() - getPosicao().getLinha() > 0 && posicao.getColuna() - getPosicao().getColuna() == 0) {
+			while (i != posicao.getLinha() || j != posicao.getColuna()) {
+				i++;
+
+				// Verificaçao especial para evitar a
 				// verificação de nulo da ultima posição
 				if (i == posicao.getLinha() && j == posicao.getColuna())
 					return true;
 				// Verificação de nulo cada posição da trajetória
-				else if(Tabuleiro.verificadorNulo(i, j) == false)
+				else if (Tabuleiro.verificadorNulo(i, j) == false)
 					return false;
 			}
-			// Verificação de trajetória no sentido: (-)Linha ou (-)Coluna	
 		}
-		if(posicao.getLinha() - getPosicao().getLinha() < 0 || posicao.getColuna() - getPosicao().getColuna() < 0) {
-			while(i != posicao.getLinha() || j != posicao.getColuna()) {
-				if(getPosicao().getLinha() == posicao.getLinha()) {
-					j--;
-				}else if(getPosicao().getColuna() == posicao.getColuna()){
-					i--;
-				}
-				// Verificaçao especial para evitar a 
+		// Verificação de trajetória no sentido: (-)Linha
+		if (posicao.getLinha() - getPosicao().getLinha() > 0 && posicao.getColuna() - getPosicao().getColuna() == 0) {
+			while (i != posicao.getLinha() || j != posicao.getColuna()) {
+				i--;
+
+				// Verificaçao especial para evitar a
 				// verificação de nulo da ultima posição
 				if (i == posicao.getLinha() && j == posicao.getColuna())
 					return true;
 				// Verificação de nulo cada posição da trajetória
-				else if(Tabuleiro.verificadorNulo(i, j) == false)
+				else if (Tabuleiro.verificadorNulo(i, j) == false)
 					return false;
 			}
 		}
-		if(posicao.getLinha() - getPosicao().getLinha() > 0 && posicao.getColuna() - getPosicao().getColuna() > 0) {
-			while(i != posicao.getLinha() && j != posicao.getColuna()) {
+		// Verificação de trajetória no sentido: (+)Coluna
+		if (posicao.getLinha() - getPosicao().getLinha() == 0 && posicao.getColuna() - getPosicao().getColuna() > 0) {
+			while (i != posicao.getLinha() || j != posicao.getColuna()) {
+				j++;
+
+				// Verificaçao especial para evitar a
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if (Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+		}
+		// Verificação de trajetória no sentido: (-)Coluna
+		if (posicao.getLinha() - getPosicao().getLinha() == 0 && posicao.getColuna() - getPosicao().getColuna() < 0) {
+			while (i != posicao.getLinha() || j != posicao.getColuna()) {
+				j--;
+
+				// Verificaçao especial para evitar a
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if (Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+		}
+		// Verificação de trajetória no sentido: (+)Linha (+)Coluna
+		if (posicao.getLinha() - getPosicao().getLinha() > 0 && posicao.getColuna() - getPosicao().getColuna() > 0) {
+			while (i != posicao.getLinha() && j != posicao.getColuna()) {
 				i++;
 				j++;
-				// Verificaçao especial para evitar a 
+				// Verificaçao especial para evitar a
 				// verificação de nulo da ultima posição
 				if (i == posicao.getLinha() && j == posicao.getColuna())
 					return true;
 				// Verificação de nulo cada posição da trajetória
-				else if(Tabuleiro.verificadorNulo(i, j) == false)
-					return false;
-			}
-			// Verificação de trajetória no sentido: (+)Linha (-)Coluna	
-		}if(posicao.getLinha() - getPosicao().getLinha() > 0 && posicao.getColuna() - getPosicao().getColuna() < 0) {
-			while(i != posicao.getLinha() && j != posicao.getColuna()) {
-				i++;
-				j--;
-				// Verificaçao especial para evitar a 
-				// verificação de nulo da ultima posição
-				if (i == posicao.getLinha() && j == posicao.getColuna())
-					return true;
-				// Verificação de nulo cada posição da trajetória
-				else if(Tabuleiro.verificadorNulo(i, j) == false)
-					return false;
-			}
-			// Verificação de trajetória no sentido: (-)Linha (+)Coluna	
-		}if(posicao.getLinha() - getPosicao().getLinha() < 0 && posicao.getColuna() - getPosicao().getColuna() > 0) {
-			while(i != posicao.getLinha() && j != posicao.getColuna()) {
-				i--;
-				j++;
-				// Verificaçao especial para evitar a 
-				// verificação de nulo da ultima posição
-				if (i == posicao.getLinha() && j == posicao.getColuna())
-					return true;
-				// Verificação de nulo cada posição da trajetória
-				else if(Tabuleiro.verificadorNulo(i, j) == false)
-					return false;
-			}
-		// Verificação de trajetória no sentido: (-)Linha (-)Coluna	
-		}if(posicao.getLinha() - getPosicao().getLinha() < 0 && posicao.getColuna() - getPosicao().getColuna() < 0) {
-			while(i != posicao.getLinha() && j != posicao.getColuna()) {
-				i--;
-				j--;
-				// Verificaçao especial para evitar a 
-				// verificação de nulo da ultima posição
-				if (i == posicao.getLinha() && j == posicao.getColuna())
-					return true;
-				// Verificação de nulo cada posição da trajetória
-				else if(Tabuleiro.verificadorNulo(i, j) == false)
+				else if (Tabuleiro.verificadorNulo(i, j) == false)
 					return false;
 			}
 		}
-		
+		// Verificação de trajetória no sentido: (+)Linha (-)Coluna
+		if (posicao.getLinha() - getPosicao().getLinha() > 0 && posicao.getColuna() - getPosicao().getColuna() < 0) {
+			while (i != posicao.getLinha() && j != posicao.getColuna()) {
+				i++;
+				j--;
+				// Verificaçao especial para evitar a
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if (Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+		}
+		// Verificação de trajetória no sentido: (+)Linha (-)Coluna
+		if (posicao.getLinha() - getPosicao().getLinha() < 0 && posicao.getColuna() - getPosicao().getColuna() > 0) {
+			while (i != posicao.getLinha() && j != posicao.getColuna()) {
+				i--;
+				j++;
+				// Verificaçao especial para evitar a
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if (Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+		}
+		// Verificação de trajetória no sentido: (-)Linha (-)Coluna
+		if (posicao.getLinha() - getPosicao().getLinha() < 0 && posicao.getColuna() - getPosicao().getColuna() < 0) {
+			while (i != posicao.getLinha() && j != posicao.getColuna()) {
+				i--;
+				j--;
+				// Verificaçao especial para evitar a
+				// verificação de nulo da ultima posição
+				if (i == posicao.getLinha() && j == posicao.getColuna())
+					return true;
+				// Verificação de nulo cada posição da trajetória
+				else if (Tabuleiro.verificadorNulo(i, j) == false)
+					return false;
+			}
+		}
+
 		return true;
 	}
 }
