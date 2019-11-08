@@ -21,6 +21,36 @@ public class Tabuleiro {
 	private static int countPreto = 0;
 	private static int countBranco = 0;
 
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 //		Peca peca1 = new Peao(0,0, Cor.PRETA);
@@ -154,6 +184,8 @@ public class Tabuleiro {
 			System.out.println("");
 			for (int col = 0; col < 8; col++) {
 				System.out.print(" " + getPeca(linha, col));
+				if (getPeca(linha,col)==null)
+					System.out.print("         ");
 			}
 		}
 		System.out.println(" \n \n");
