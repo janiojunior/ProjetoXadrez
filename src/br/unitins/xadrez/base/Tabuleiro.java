@@ -80,9 +80,9 @@ public class Tabuleiro {
 
 		// Movimento da peca
 		
-		  Tabuleiro.mover(Tabuleiro.getPeca(6, 0), new Posicao(5,1));
-//		  Tabuleiro.mover(Tabuleiro.getPeca(2, 2), new Posicao(4,3));
-//		  Tabuleiro.mover(Tabuleiro.getPeca(4, 3), new Posicao(5,5));
+		  Tabuleiro.mover(Tabuleiro.getPeca(1, 3), new Posicao(3,3));
+		  Tabuleiro.mover(Tabuleiro.getPeca(6, 4), new Posicao(4,4));
+		  Tabuleiro.mover(Tabuleiro.getPeca(4, 4), new Posicao(3,3));
 //		  Tabuleiro.mover(Tabuleiro.getPeca(6, 4), new Posicao(5,5));
 //		  Tabuleiro.mover(Tabuleiro.getPeca(6,5), new Posicao(4,5));
 		 

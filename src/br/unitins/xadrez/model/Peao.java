@@ -25,10 +25,9 @@ public class Peao extends Peca {
 			} else if (movInicial == false && (posicao.getLinha() == getPosicao().getLinha() - 1
 					&& posicao.getColuna() == getPosicao().getColuna())) {
 				return true;
-			} else if ((getPosicao() != null) && ((posicao.getColuna() == getPosicao().getColuna() + 1
-					&& posicao.getLinha() == getPosicao().getLinha() + 1)
-					|| (posicao.getColuna() == getPosicao().getColuna() - 1
-							&& posicao.getLinha() == getPosicao().getLinha() + 1))) {
+			} else if ((Tabuleiro.getPeca(posicao).getCor() != this.getCor() && posicao.getColuna() == getPosicao().getColuna() + 1
+					&& posicao.getLinha() == getPosicao().getLinha() - 1 ) || (Tabuleiro.getPeca(posicao).getCor() != this.getCor() && posicao.getColuna() == getPosicao().getColuna() - 1
+					&& posicao.getLinha() == getPosicao().getLinha() - 1 )) {
 				return true;
 			}
 		}
@@ -43,10 +42,9 @@ public class Peao extends Peca {
 			} else if (movInicial == false && (posicao.getLinha() == getPosicao().getLinha() + 1
 					&& posicao.getColuna() == getPosicao().getColuna())) {
 				return true;
-			} else if ((getPosicao() != null) && ((posicao.getColuna() == getPosicao().getColuna() + 1
-					&& posicao.getLinha() == getPosicao().getLinha() - 1)
-					|| (posicao.getColuna() == getPosicao().getColuna() - 1
-							&& posicao.getLinha() == getPosicao().getLinha() - 1))) {
+			} else if (((Tabuleiro.getPeca(posicao).getCor() != this.getCor() && Tabuleiro.getPeca(posicao) != null) && posicao.getColuna() == getPosicao().getColuna() + 1
+					&& posicao.getLinha() == getPosicao().getLinha() + 1 ) || (Tabuleiro.getPeca(posicao).getCor() != this.getCor() && posicao.getColuna() == getPosicao().getColuna() - 1
+					&& posicao.getLinha() == getPosicao().getLinha() + 1 )) {
 				return true;
 			}
 		}
