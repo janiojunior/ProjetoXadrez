@@ -4,6 +4,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import br.unitins.xadrez.base.Tabuleiro;
+import br.unitins.xadrez.model.Cor;
+import br.unitins.xadrez.model.Peao;
+import br.unitins.xadrez.model.Peca;
 import br.unitins.xadrez.model.Posicao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,7 +20,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
-public class TabuleiroController implements Initializable {
+public class TabuleiroController  implements Initializable {
+	
+
 
 	
 	@FXML
@@ -320,6 +325,8 @@ public class TabuleiroController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		Tabuleiro.iniciarTabuleiro();
 
 		addDropHandling(hbox00);
 		addDropHandling(hbox10);
@@ -455,26 +462,71 @@ public class TabuleiroController implements Initializable {
 				e.acceptTransferModes(TransferMode.MOVE);
 			}
 		});
-
+		
 		pane.setOnDragDropped(e -> {
 			Dragboard db = e.getDragboard();
 			if (db.hasContent(buttonFormat)) {
+				
 				// retorna a linha e coluna da posicao do pane atual ( para a posicao zero é retornado null)
-				System.out.println("Linha: "+ GridPane.getRowIndex(((Pane) nodeReference.getParent())) + " Coluna: " + GridPane.getColumnIndex(((Pane) nodeReference.getParent())));
+				System.out.println("Linha: "+  GridPane.getRowIndex(((Pane) nodeReference.getParent())) + " Coluna: " + GridPane.getColumnIndex(((Pane) nodeReference.getParent())));
+				
+				Integer linhaAtual = GridPane.getRowIndex(((Pane) nodeReference.getParent())); //int para a posição do pane atual (Linha)
+				Integer colunaAtual = GridPane.getColumnIndex(((Pane) nodeReference.getParent())); //int para a posição do pane atual (Coluna)
+				
+				
+				//se for null retorna 0
+				if (colunaAtual == null) {
+					colunaAtual = 0;
+				}
+				
 				
 				// retorna a linha e coluna da posicao nova do pane ( para a posicao zero é retornado null)
 				System.out.println("Linha: "+ GridPane.getRowIndex(pane) + " Coluna: " + GridPane.getColumnIndex(pane));
+				
+				Integer linhaDesejada = GridPane.getRowIndex(pane);
+				Integer colunaDesejada = GridPane.getColumnIndex(pane);
+				
+				//se for null retorna 0
+				if (colunaDesejada == null) {
+					colunaDesejada = 0;
+				}
+				
+				
+				//TESTE MOVIMENTAÇÃO  PEAO BRANCO POSIÇÃO 6, 0
+				if (linhaAtual == 6 && colunaAtual == 0) { //NECESSITA DEIXAR DINAMICO
+			
+					Peca peca = new Peao(linhaAtual, colunaAtual, Cor.BRANCA); //NECESSITA DEIXAR DINAMICO
+					boolean movPeca = peca.mover(new Posicao(linhaDesejada, colunaDesejada)); 
+					
+					if (movPeca == true) { 
+						Tabuleiro.mover(Tabuleiro.getPeca(linhaAtual, colunaAtual), new Posicao(linhaDesejada,colunaDesejada));
+
+						// remove o componente do antigo hbox
+						((Pane) nodeReference.getParent()).getChildren().remove(nodeReference);
+						// limpa (se tiver) o componente do novo hbox
+						pane.getChildren().clear();
+						// adiciona o componente no novo hbox
+						pane.getChildren().add(nodeReference);
+						// finaliza a acao do drop
+						e.setDropCompleted(true);
+					}
+
+				
+				}
+				
+				
+				Tabuleiro.imprimir();
 
 //            	if (peca.move(1,0)) {
 
-				// remove o componente do antigo hbox
-				((Pane) nodeReference.getParent()).getChildren().remove(nodeReference);
-				// limpa (se tiver) o componente do novo hbox
-				pane.getChildren().clear();
-				// adiciona o componente no novo hbox
-				pane.getChildren().add(nodeReference);
-				// finaliza a acao do drop
-				e.setDropCompleted(true);
+//				// remove o componente do antigo hbox
+//				((Pane) nodeReference.getParent()).getChildren().remove(nodeReference);
+//				// limpa (se tiver) o componente do novo hbox
+//				pane.getChildren().clear();
+//				// adiciona o componente no novo hbox
+//				pane.getChildren().add(nodeReference);
+//				// finaliza a acao do drop
+//				e.setDropCompleted(true);
 //            	}
 			}
 		});
@@ -490,3 +542,5 @@ public class TabuleiroController implements Initializable {
 //    }
 
 }
+
+

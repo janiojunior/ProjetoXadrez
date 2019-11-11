@@ -65,7 +65,7 @@ public class Tabuleiro {
 //		matrizTabuleiro.put(peca4.getPosicao(), peca4);
 //		matrizTabuleiro.put(peca5.getPosicao(), peca5);
 ////		
-//		System.out.println(new Posicao(0,0).hashCode());
+//	System.out.println(new Posicao(0,0).hashCode());
 //		System.out.println(new Posicao(0,0).hashCode());
 ////		
 //		System.out.println(getPeca(0,0));
