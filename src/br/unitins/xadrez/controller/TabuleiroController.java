@@ -459,6 +459,11 @@ public class TabuleiroController implements Initializable {
 		pane.setOnDragDropped(e -> {
 			Dragboard db = e.getDragboard();
 			if (db.hasContent(buttonFormat)) {
+				// retorna a linha e coluna da posicao do pane atual ( para a posicao zero é retornado null)
+				System.out.println("Linha: "+ GridPane.getRowIndex(((Pane) nodeReference.getParent())) + " Coluna: " + GridPane.getColumnIndex(((Pane) nodeReference.getParent())));
+				
+				// retorna a linha e coluna da posicao nova do pane ( para a posicao zero é retornado null)
+				System.out.println("Linha: "+ GridPane.getRowIndex(pane) + " Coluna: " + GridPane.getColumnIndex(pane));
 
 //            	if (peca.move(1,0)) {
 
