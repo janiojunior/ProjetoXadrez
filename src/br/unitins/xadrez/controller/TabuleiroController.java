@@ -20,304 +20,301 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
-public class TabuleiroController  implements Initializable {
-	
+public class TabuleiroController implements Initializable {
 
-
-	
 	@FXML
 	private GridPane gridPane;
 
 	@FXML
-    private HBox hbox00;
+	private HBox hbox00;
 
-    @FXML
-    private ImageView torrePretaEsquerda;
+	@FXML
+	private ImageView torrePretaEsquerda;
 
-    @FXML
-    private HBox hbox10;
+	@FXML
+	private HBox hbox10;
 
-    @FXML
-    private ImageView cavaloPretoEsquerda;
+	@FXML
+	private ImageView cavaloPretoEsquerda;
 
-    @FXML
-    private HBox hbox20;
+	@FXML
+	private HBox hbox20;
 
-    @FXML
-    private ImageView bispoPretoDireita;
+	@FXML
+	private ImageView bispoPretoDireita;
 
-    @FXML
-    private HBox hbox30;
+	@FXML
+	private HBox hbox30;
 
-    @FXML
-    private ImageView rainhaPreta;
+	@FXML
+	private ImageView rainhaPreta;
 
-    @FXML
-    private HBox hbox40;
+	@FXML
+	private HBox hbox40;
 
-    @FXML
-    private ImageView reiPreto;
+	@FXML
+	private ImageView reiPreto;
 
-    @FXML
-    private HBox hbox50;
+	@FXML
+	private HBox hbox50;
 
-    @FXML
-    private ImageView bispoPretoEsquerda;
+	@FXML
+	private ImageView bispoPretoEsquerda;
 
-    @FXML
-    private HBox hbox60;
-    
-    @FXML
-    private ImageView cavaloPretoDireita;
+	@FXML
+	private HBox hbox60;
 
-    @FXML
-    private HBox hbox70;
+	@FXML
+	private ImageView cavaloPretoDireita;
 
-    @FXML
-    private ImageView torrePretaDireita;
+	@FXML
+	private HBox hbox70;
 
-    @FXML
-    private HBox hbox01;
+	@FXML
+	private ImageView torrePretaDireita;
 
-    @FXML
-    private ImageView peaoPreto01;
+	@FXML
+	private HBox hbox01;
 
-    @FXML
-    private HBox hbox11;
+	@FXML
+	private ImageView peaoPreto01;
 
-    @FXML
-    private ImageView peaoPreto11;
+	@FXML
+	private HBox hbox11;
 
-    @FXML
-    private HBox hbox21;
+	@FXML
+	private ImageView peaoPreto11;
 
-    @FXML
-    private ImageView peaoPreto12;
+	@FXML
+	private HBox hbox21;
 
-    @FXML
-    private HBox hbox31;
+	@FXML
+	private ImageView peaoPreto12;
 
-    @FXML
-    private ImageView peaoPreto13;
+	@FXML
+	private HBox hbox31;
 
-    @FXML
-    private HBox hbox41;
+	@FXML
+	private ImageView peaoPreto13;
 
-    @FXML
-    private ImageView peaoPreto14;
+	@FXML
+	private HBox hbox41;
 
-    @FXML
-    private HBox hbox51;
+	@FXML
+	private ImageView peaoPreto14;
 
-    @FXML
-    private ImageView peaoPreto15;
+	@FXML
+	private HBox hbox51;
 
-    @FXML
-    private HBox hbox61;
+	@FXML
+	private ImageView peaoPreto15;
 
-    @FXML
-    private ImageView peaoPreto16;
+	@FXML
+	private HBox hbox61;
 
-    @FXML
-    private HBox hbox71;
+	@FXML
+	private ImageView peaoPreto16;
 
-    @FXML
-    private ImageView peaoPreto17;
+	@FXML
+	private HBox hbox71;
 
-    @FXML
-    private HBox hbox02;
+	@FXML
+	private ImageView peaoPreto17;
 
-    @FXML
-    private HBox hbox12;
+	@FXML
+	private HBox hbox02;
 
-    @FXML
-    private HBox hbox22;
+	@FXML
+	private HBox hbox12;
 
-    @FXML
-    private HBox hbox32;
+	@FXML
+	private HBox hbox22;
 
-    @FXML
-    private HBox hbox42;
+	@FXML
+	private HBox hbox32;
 
-    @FXML
-    private HBox hbox52;
+	@FXML
+	private HBox hbox42;
 
-    @FXML
-    private HBox hbox62;
+	@FXML
+	private HBox hbox52;
 
-    @FXML
-    private HBox hbox72;
+	@FXML
+	private HBox hbox62;
 
-    @FXML
-    private HBox hbox03;
+	@FXML
+	private HBox hbox72;
 
-    @FXML
-    private HBox hbox13;
+	@FXML
+	private HBox hbox03;
 
-    @FXML
-    private HBox hbox23;
+	@FXML
+	private HBox hbox13;
 
-    @FXML
-    private HBox hbox33;
+	@FXML
+	private HBox hbox23;
 
-    @FXML
-    private HBox hbox43;
+	@FXML
+	private HBox hbox33;
 
-    @FXML
-    private HBox hbox53;
+	@FXML
+	private HBox hbox43;
 
-    @FXML
-    private HBox hbox63;
+	@FXML
+	private HBox hbox53;
 
-    @FXML
-    private HBox hbox73;
+	@FXML
+	private HBox hbox63;
 
-    @FXML
-    private HBox hbox04;
+	@FXML
+	private HBox hbox73;
 
-    @FXML
-    private HBox hbox14;
+	@FXML
+	private HBox hbox04;
 
-    @FXML
-    private HBox hbox24;
+	@FXML
+	private HBox hbox14;
 
-    @FXML
-    private HBox hbox34;
+	@FXML
+	private HBox hbox24;
 
-    @FXML
-    private HBox hbox44;
+	@FXML
+	private HBox hbox34;
 
-    @FXML
-    private HBox hbox54;
+	@FXML
+	private HBox hbox44;
 
-    @FXML
-    private HBox hbox64;
+	@FXML
+	private HBox hbox54;
 
-    @FXML
-    private HBox hbox74;
+	@FXML
+	private HBox hbox64;
 
-    @FXML
-    private HBox hbox05;
+	@FXML
+	private HBox hbox74;
 
-    @FXML
-    private HBox hbox15;
+	@FXML
+	private HBox hbox05;
 
-    @FXML
-    private HBox hbox25;
+	@FXML
+	private HBox hbox15;
 
-    @FXML
-    private HBox hbox35;
+	@FXML
+	private HBox hbox25;
 
-    @FXML
-    private HBox hbox45;
+	@FXML
+	private HBox hbox35;
 
-    @FXML
-    private HBox hbox55;
+	@FXML
+	private HBox hbox45;
 
-    @FXML
-    private HBox hbox65;
+	@FXML
+	private HBox hbox55;
 
-    @FXML
-    private HBox hbox75;
+	@FXML
+	private HBox hbox65;
 
-    @FXML
-    private HBox hbox06;
+	@FXML
+	private HBox hbox75;
 
-    @FXML
-    private ImageView peaoBranco06;
+	@FXML
+	private HBox hbox06;
 
-    @FXML
-    private HBox hbox16;
+	@FXML
+	private ImageView peaoBranco06;
 
-    @FXML
-    private ImageView peaoBranco16;
+	@FXML
+	private HBox hbox16;
 
-    @FXML
-    private HBox hbox26;
+	@FXML
+	private ImageView peaoBranco16;
 
-    @FXML
-    private ImageView peaoBranco26;
+	@FXML
+	private HBox hbox26;
 
-    @FXML
-    private HBox hbox36;
+	@FXML
+	private ImageView peaoBranco26;
 
-    @FXML
-    private ImageView peaoBranco36;
+	@FXML
+	private HBox hbox36;
 
-    @FXML
-    private HBox hbox46;
+	@FXML
+	private ImageView peaoBranco36;
 
-    @FXML
-    private ImageView peaoBranco46;
+	@FXML
+	private HBox hbox46;
 
-    @FXML
-    private HBox hbox56;
+	@FXML
+	private ImageView peaoBranco46;
 
-    @FXML
-    private ImageView peaoBranco56;
+	@FXML
+	private HBox hbox56;
 
-    @FXML
-    private HBox hbox66;
+	@FXML
+	private ImageView peaoBranco56;
 
-    @FXML
-    private ImageView peaoBranco66;
+	@FXML
+	private HBox hbox66;
 
-    @FXML
-    private HBox hbox76;
+	@FXML
+	private ImageView peaoBranco66;
 
-    @FXML
-    private ImageView peaoBranco76;
+	@FXML
+	private HBox hbox76;
 
-    @FXML
-    private HBox hbox07;
+	@FXML
+	private ImageView peaoBranco76;
 
-    @FXML
-    private ImageView torreBrancaEsquerda;
+	@FXML
+	private HBox hbox07;
 
-    @FXML
-    private ImageView peaoBranco68;
+	@FXML
+	private ImageView torreBrancaEsquerda;
 
-    @FXML
-    private HBox hbox17;
+	@FXML
+	private ImageView peaoBranco68;
 
-    @FXML
-    private ImageView cavaloBrancoEsquerda;
+	@FXML
+	private HBox hbox17;
 
-    @FXML
-    private HBox hbox27;
+	@FXML
+	private ImageView cavaloBrancoEsquerda;
 
-    @FXML
-    private ImageView bispoBrancoEsquerdo;
+	@FXML
+	private HBox hbox27;
 
-    @FXML
-    private HBox hbox37;
+	@FXML
+	private ImageView bispoBrancoEsquerdo;
 
-    @FXML
-    private ImageView rainhaBranca;
+	@FXML
+	private HBox hbox37;
 
-    @FXML
-    private HBox hbox47;
+	@FXML
+	private ImageView rainhaBranca;
 
-    @FXML
-    private ImageView reiBranco;
+	@FXML
+	private HBox hbox47;
 
-    @FXML
-    private HBox hbox57;
+	@FXML
+	private ImageView reiBranco;
 
-    @FXML
-    private ImageView bispoBrancoDireito;
+	@FXML
+	private HBox hbox57;
 
-    @FXML
-    private HBox hbox67;
+	@FXML
+	private ImageView bispoBrancoDireito;
 
-    @FXML
-    private ImageView cavaloBrancoDireito;
+	@FXML
+	private HBox hbox67;
 
-    @FXML
-    private HBox hbox77;
+	@FXML
+	private ImageView cavaloBrancoDireito;
 
-    @FXML
-    private ImageView torreBrancaDireita;
+	@FXML
+	private HBox hbox77;
+
+	@FXML
+	private ImageView torreBrancaDireita;
 
 	private final DataFormat buttonFormat = new DataFormat("com.example.myapp.formats.button");
 
@@ -325,7 +322,7 @@ public class TabuleiroController  implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
+
 		Tabuleiro.iniciarTabuleiro();
 
 		addDropHandling(hbox00);
@@ -393,7 +390,7 @@ public class TabuleiroController  implements Initializable {
 		addDropHandling(hbox67);
 		addDropHandling(hbox77);
 
-		//Pecas Pretas
+		// Pecas Pretas
 		addEventHandler(torrePretaEsquerda);
 		addEventHandler(cavaloPretoEsquerda);
 		addEventHandler(bispoPretoEsquerda);
@@ -410,7 +407,7 @@ public class TabuleiroController  implements Initializable {
 		addEventHandler(peaoPreto15);
 		addEventHandler(peaoPreto16);
 		addEventHandler(peaoPreto17);
-		//Pecas Brancas
+		// Pecas Brancas
 		addEventHandler(torreBrancaEsquerda);
 		addEventHandler(cavaloBrancoEsquerda);
 		addEventHandler(bispoBrancoEsquerdo);
@@ -427,8 +424,6 @@ public class TabuleiroController  implements Initializable {
 		addEventHandler(peaoBranco56);
 		addEventHandler(peaoBranco66);
 		addEventHandler(peaoBranco76);
-
-
 
 //		for (int i = 0; i < 64; i++) {
 //			HBox x = new HBox();
@@ -462,60 +457,67 @@ public class TabuleiroController  implements Initializable {
 				e.acceptTransferModes(TransferMode.MOVE);
 			}
 		});
-		
+
 		pane.setOnDragDropped(e -> {
 			Dragboard db = e.getDragboard();
 			if (db.hasContent(buttonFormat)) {
-				
-				// retorna a linha e coluna da posicao do pane atual ( para a posicao zero é retornado null)
-				System.out.println("Linha: "+  GridPane.getRowIndex(((Pane) nodeReference.getParent())) + " Coluna: " + GridPane.getColumnIndex(((Pane) nodeReference.getParent())));
-				
-				Integer linhaAtual = GridPane.getRowIndex(((Pane) nodeReference.getParent())); //int para a posição do pane atual (Linha)
-				Integer colunaAtual = GridPane.getColumnIndex(((Pane) nodeReference.getParent())); //int para a posição do pane atual (Coluna)
-				
-				
-				//se for null retorna 0
-				if (colunaAtual == null) {
+
+				// retorna a linha e coluna da posicao do pane atual ( para a posicao zero é
+				// retornado null)
+//				System.out.println("Linha: "+  GridPane.getRowIndex(((Pane) nodeReference.getParent())) + " Coluna: " + GridPane.getColumnIndex(((Pane) nodeReference.getParent())));
+
+				Integer linhaAtual = GridPane.getRowIndex(((Pane) nodeReference.getParent())); // int para a posição do
+																								// pane atual (Linha)
+				Integer colunaAtual = GridPane.getColumnIndex(((Pane) nodeReference.getParent())); // int para a posição
+																									// do pane atual
+																									// (Coluna)
+
+				// se for null retorna 0
+				if (colunaAtual == null)
 					colunaAtual = 0;
-				}
-				
-				
-				// retorna a linha e coluna da posicao nova do pane ( para a posicao zero é retornado null)
-				System.out.println("Linha: "+ GridPane.getRowIndex(pane) + " Coluna: " + GridPane.getColumnIndex(pane));
-				
+
+				if (linhaAtual == null)
+					linhaAtual = 0;
+
+				// retorna a linha e coluna da posicao nova do pane ( para a posicao zero é
+				// retornado null)
+//				System.out.println("Linha: "+ GridPane.getRowIndex(pane) + " Coluna: " + GridPane.getColumnIndex(pane));
+
 				Integer linhaDesejada = GridPane.getRowIndex(pane);
 				Integer colunaDesejada = GridPane.getColumnIndex(pane);
-				
-				//se for null retorna 0
-				if (colunaDesejada == null) {
+
+				// se for null retorna 0
+				if (colunaDesejada == null)
 					colunaDesejada = 0;
-				}
-				
-				
-				//TESTE MOVIMENTAÇÃO  PEAO BRANCO POSIÇÃO 6, 0
-				if (linhaAtual == 6 && colunaAtual == 0) { //NECESSITA DEIXAR DINAMICO
-			
-					Peca peca = new Peao(linhaAtual, colunaAtual, Cor.BRANCA); //NECESSITA DEIXAR DINAMICO
-					boolean movPeca = peca.mover(new Posicao(linhaDesejada, colunaDesejada)); 
-					
-					if (movPeca == true) { 
-						Tabuleiro.mover(Tabuleiro.getPeca(linhaAtual, colunaAtual), new Posicao(linhaDesejada,colunaDesejada));
 
-						// remove o componente do antigo hbox
-						((Pane) nodeReference.getParent()).getChildren().remove(nodeReference);
-						// limpa (se tiver) o componente do novo hbox
-						pane.getChildren().clear();
-						// adiciona o componente no novo hbox
-						pane.getChildren().add(nodeReference);
-						// finaliza a acao do drop
-						e.setDropCompleted(true);
-					}
+				if (linhaDesejada == null)
+					linhaDesejada = 0;
 
-				
+				// TESTE MOVIMENTAÇÃO PEAO BRANCO POSIÇÃO 6, 0
+//				if (linhaAtual == 6 && colunaAtual == 0) { //NECESSITA DEIXAR DINAMICO
+//			
+//					Peca peca = new Peao(linhaAtual, colunaAtual, Cor.BRANCA); //NECESSITA DEIXAR DINAMICO
+//					boolean movPeca = peca.mover(new Posicao(linhaDesejada, colunaDesejada)); 
+
+				if (Tabuleiro.mover(Tabuleiro.getPeca(linhaAtual, colunaAtual),
+						new Posicao(linhaDesejada, colunaDesejada))) {
+
+					// remove o componente do antigo hbox
+					((Pane) nodeReference.getParent()).getChildren().remove(nodeReference);
+					// limpa (se tiver) o componente do novo hbox
+					pane.getChildren().clear();
+					// adiciona o componente no novo hbox
+					pane.getChildren().add(nodeReference);
+					// finaliza a acao do drop
+					e.setDropCompleted(true);
 				}
-				
-				
-				Tabuleiro.imprimir();
+
+			}
+		});
+	}
+}
+
+//				Tabuleiro.imprimir();
 
 //            	if (peca.move(1,0)) {
 
@@ -528,9 +530,9 @@ public class TabuleiroController  implements Initializable {
 //				// finaliza a acao do drop
 //				e.setDropCompleted(true);
 //            	}
-			}
-		});
-	}
+//			}
+//		});
+//}
 
 //	@FXML
 //    void handleActionBTorreBrancaEsquerda(ActionEvent event) {
@@ -541,6 +543,4 @@ public class TabuleiroController  implements Initializable {
 //		alert.showAndWait();
 //    }
 
-}
-
-
+//}
