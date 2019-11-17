@@ -4,9 +4,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import br.unitins.xadrez.base.Tabuleiro;
-import br.unitins.xadrez.model.Cor;
-import br.unitins.xadrez.model.Peao;
-import br.unitins.xadrez.model.Peca;
 import br.unitins.xadrez.model.Posicao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -438,8 +435,6 @@ public class TabuleiroController implements Initializable {
 
 	}
 
-	boolean condicao = false;
-
 	private void addEventHandler(Node node) {
 		node.setOnDragDetected(e -> {
 			Dragboard db = node.startDragAndDrop(TransferMode.MOVE);
@@ -495,30 +490,18 @@ public class TabuleiroController implements Initializable {
 				if (linhaDesejada == null)
 					linhaDesejada = 0;
 
-				// TESTE MOVIMENTAÇÃO PEAO BRANCO POSIÇÃO 6, 0
-//				if (linhaAtual == 6 && colunaAtual == 0) { //NECESSITA DEIXAR DINAMICO
-//			
-//					Peca peca = new Peao(linhaAtual, colunaAtual, Cor.BRANCA); //NECESSITA DEIXAR DINAMICO
-//					boolean movPeca = peca.mover(new Posicao(linhaDesejada, colunaDesejada)); 
 
 				if (Tabuleiro.mover(Tabuleiro.getPeca(linhaAtual, colunaAtual),
 						new Posicao(linhaDesejada, colunaDesejada))) {
 
-					if (nodeReference.getId().contains("Branc") || condicao == true) { // Verifica se a primeira
-																						// peça selecionada é Branca
-
-						condicao = true;
-						// remove o componente do antigo hbox
-						((Pane) nodeReference.getParent()).getChildren().remove(nodeReference);
-						// limpa (se tiver) o componente do novo hbox
-						pane.getChildren().clear();
-						// adiciona o componente no novo hbox
-						pane.getChildren().add(nodeReference);
-						// finaliza a acao do drop
-						e.setDropCompleted(true);
-					} else {
-						System.out.println("Primeira jogada apenas com a Peça Branca!");
-					}
+					// remove o componente do antigo hbox
+					((Pane) nodeReference.getParent()).getChildren().remove(nodeReference);
+					// limpa (se tiver) o componente do novo hbox
+					pane.getChildren().clear();
+					// adiciona o componente no novo hbox
+					pane.getChildren().add(nodeReference);
+					// finaliza a acao do drop
+					e.setDropCompleted(true);
 				}
 
 			}
